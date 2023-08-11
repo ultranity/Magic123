@@ -9,7 +9,7 @@ from nerf.utils import *
 
 import yaml
 from easydict import EasyDict as edict
-import dnnultis
+import dnnutils
 import logging
 
 logger = logging.getLogger(__name__)
@@ -441,7 +441,7 @@ if __name__ == '__main__':
 
     # workspace prepare
     setup_workspace(opt)
-    dnnultis.setup_logging(opt.log_path)
+    dnnutils.setup_logging(opt.log_path)
 
     if opt.seed < 0:
         opt.seed = random.randint(0, 10000)
